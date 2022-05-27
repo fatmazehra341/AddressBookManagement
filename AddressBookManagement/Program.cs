@@ -8,7 +8,7 @@ public class Program
         AddressBook addressBook = new AddressBook();
         Console.WriteLine("Please Enter the Information");
         bool check = true;
-        Console.WriteLine(" Enter the Zero to Stop The Execution 0\n Display The Information1\n");
+        Console.WriteLine(" Enter the Zero to Stop The Execution 0\n Display The Information1\n Editing information 2\n" );
 
         while (check)
         {
@@ -18,6 +18,11 @@ public class Program
             {
                 case 1: addressBook.Display(); break;
                 case 0: check = false; break;
+                case 2:
+                    Console.WriteLine("Enter the Name for Edit the Information");
+                    string name = Console.ReadLine();
+                    addressBook.EditContactInAddressBook(name); break;
+
             }
 
         }
